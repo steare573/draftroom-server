@@ -1,4 +1,4 @@
-export default (dat, cb) => {
+export default function draftPlayer(dat, cb) {
   const data = dat;
   data.roomId = data.roomId || 1;
 
@@ -14,4 +14,4 @@ export default (dat, cb) => {
   const callback = cb || function noop() {};
 
   return callback(undefined, this.drafts[data.roomId]);
-};
+}

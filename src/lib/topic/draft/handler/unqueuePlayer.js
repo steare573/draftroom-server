@@ -1,4 +1,4 @@
-export default (data, callback) => {
+export default function unqueuePlayer(data, callback) {
   const myLeague = this.leagues[data.roomId];
 
   const allTeams = myLeague.teams || [];
@@ -11,4 +11,4 @@ export default (data, callback) => {
   return callback(
     undefined, { responseType: 'user', data: { queue: myTeam.queue, teamId: data.teamId } }
   );
-};
+}

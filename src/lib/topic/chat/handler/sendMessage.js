@@ -1,5 +1,5 @@
 // using this.chats smells bad...fix this later
-export default (dat, cb) => {
+export default function sendMessage(dat, cb) {
   const data = dat;
   data.roomId = data.roomId || 1;
 
@@ -14,4 +14,4 @@ export default (dat, cb) => {
 
   const callback = cb || function noop() {};
   return callback(undefined, this.chats[data.roomId]);
-};
+}

@@ -29,10 +29,10 @@ export default class ChatTopic extends BaseTopic {
         ],
       },
     };
-    this.registerEvent('player', draftHandler);
-    this.registerEvent('getdraftedplayers', getDraftedHandler);
-    this.registerEvent('getleague', getLeagueByDraft);
-    this.registerEvent('queueplayer', queuePlayerHandler);
-    this.registerEvent('unqueueplayer', unqueuePlayerHandler);
+    this.registerEvent('player', draftHandler.bind(this));
+    this.registerEvent('getdraftedplayers', getDraftedHandler.bind(this));
+    this.registerEvent('getleague', getLeagueByDraft.bind(this));
+    this.registerEvent('queueplayer', queuePlayerHandler.bind(this));
+    this.registerEvent('unqueueplayer', unqueuePlayerHandler.bind(this));
   }
 }

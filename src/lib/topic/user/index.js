@@ -16,6 +16,6 @@ export default class ChatTopic extends BaseTopic {
         lastName: 'McTesterson',
       },
     };
-    this.registerEvent('getbyid', getHandler);
+    this.registerEvent('getbyid', getHandler.bind(this));
   }
 }

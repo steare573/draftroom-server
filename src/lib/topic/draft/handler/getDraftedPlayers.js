@@ -1,2 +1,4 @@
 // using this.chats smells bad...change this later
-export default (data, callback) => callback(undefined, this.drafts[data.roomId] || []);
+export default function getDraftedPlayers(data, callback) {
+  return callback(undefined, this.drafts[data.roomId] || []);
+}

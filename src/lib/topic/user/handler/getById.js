@@ -1,6 +1,6 @@
-export default (data, cb) => {
+export default function getById(data, cb) {
   return cb(
     undefined,
     { responseType: 'user', data: this.users[data.userId] } || { responseType: 'user', data: {} }
   );
-};
+}
